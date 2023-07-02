@@ -1,6 +1,6 @@
 {
   "name": "easy-react-text-loop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A React component that loops through an array of strings and animates them.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

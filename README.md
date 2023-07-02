@@ -57,7 +57,7 @@ const App = () => {
 | --------- | --------------- | ------- | ------------------------------------------------------- |
 | interval  | number \| array | `2500`  | The frequency (in ms) that the words change.            |
 | children  | node            |         | The words you want to loop (required)                   |
-| animation | boolean         | `true`  | Enable or disable the fade animation on enter and leave |
+| animation | enum         | `spring`  | Animation type |
 
 ## Contributing
 
