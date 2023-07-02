@@ -10,17 +10,17 @@
     "access": "public"
   },
   "scripts": {
-    "build": "pnpm run build:esm && pnpm run build:cjs && pnpm run build:types",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:types",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir dist/types",
     "prebuild": "rimraf dist",
-    "lint": "pnpm run lint:src && pnpm run lint:types",
+    "lint": "npm run lint:src && npm run lint:types",
     "lint:src": "eslint . --fix",
     "lint:types": "tsc --noEmit",
     "prettier": "prettier --write .",
-    "prepublishOnly": "pnpm run test && pnpm run prettier && pnpm run lint && pnpm run build",
-    "quality": "pnpm run test && pnpm run prettier && pnpm run lint",
+    "prepublishOnly": "npm run test && npm run prettier && npm run lint && npm run build",
+    "quality": "npm run test && npm run prettier && npm run lint",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "prepare": "husky install",
@@ -94,5 +94,5 @@
   "dependencies": {
     "framer-motion": "^10.12.18"
   },
-  "packageManager": "pnpm@8.6.5"
+  "packageManager": "npm@8.6.5"
 }
