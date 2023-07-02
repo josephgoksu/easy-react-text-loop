@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 interface Props {
   children?: React.ReactNode;
   timeout?: number;
-  animation?: "fade" | "slide";
+  animation?: "tween" | "spring" | "inertia" | "keyframes" | "just";
 }
 
 const variants = {
@@ -27,7 +27,7 @@ const variants = {
   },
 };
 
-const TextLoop: React.FC<Props> = ({ children, timeout = 2500 }) => {
+const TextLoop: React.FC<Props> = ({ children, timeout = 2500, animation = "spring" }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const TextLoop: React.FC<Props> = ({ children, timeout = 2500 }) => {
         animate="center"
         exit="exit"
         transition={{
-          y: { type: "spring", stiffness: 300, damping: 200 },
+          y: { type: animation, stiffness: 300, damping: 200 },
           opacity: { duration: 0.5 },
         }}
       >
